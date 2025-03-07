@@ -9,7 +9,7 @@ pageRouter.get('/', (req, res) => {
 });
 //Employee List
 pageRouter.get("/employees", (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '/frontend/index.html'));
 });
 // Admin
 pageRouter.get("/admin", (req, res) => {

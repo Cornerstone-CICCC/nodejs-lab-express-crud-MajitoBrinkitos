@@ -1,7 +1,7 @@
 //Get list of employees
 const getEmployees = async () => {
     try {
-        const res = await fetch('http://localhost:3500/employees', {
+        const res = await fetch('http://localhost:3000/employees', {
             method: 'GET'
         });
 

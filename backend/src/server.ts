@@ -16,7 +16,7 @@ app.use(cors())
 app.use(welcome)
 
 //Files from the frontend
-app.use(express.static(path.join(__dirname, '../../frontend')));
+app.use(express.static(path.join(__dirname, '../frontend/index.html')));
 
 //Routes
 //Home
@@ -31,7 +31,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 //Start server
-const PORT = process.env.PORT || 3500
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}...`)
 })

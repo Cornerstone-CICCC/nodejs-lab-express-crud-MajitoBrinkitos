@@ -17,7 +17,7 @@ employeeRouter.get('/', (req: Request, res: Response) => {
 
 employeeRouter.get('/employees', (req: Request, res: Response) => {
     res.status(200).json(employees)
-    res.sendFile(path.join(__dirname, '../../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../../index.html'));
 });
 
 
