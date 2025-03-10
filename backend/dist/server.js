@@ -13,12 +13,13 @@ const employees_routes_1 = __importDefault(require("./routes/employees.routes"))
 dotenv_1.default.config();
 //Create server
 const app = (0, express_1.default)();
+const port = 3000;
 //Middleware
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(welcome_middleware_1.welcome);
 //Files from the frontend
-app.use(express_1.default.static(path.join(__dirname, '../frontend/index.html')));
+app.use(express_1.default.static(path.join(__dirname, '../../../frontend/index.html')));
 //Routes
 //Home
 app.use("/", page_routes_1.default);

@@ -9,6 +9,7 @@ dotenv.config()
 
 //Create server
 const app = express()
+const port = 3000
 
 //Middleware
 app.use(express.json())
@@ -16,7 +17,7 @@ app.use(cors())
 app.use(welcome)
 
 //Files from the frontend
-app.use(express.static(path.join(__dirname, '../frontend/index.html')));
+app.use(express.static(path.join(__dirname, '../../../frontend/index.html')));
 
 //Routes
 //Home

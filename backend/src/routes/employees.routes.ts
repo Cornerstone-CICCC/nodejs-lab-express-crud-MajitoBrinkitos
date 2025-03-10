@@ -5,7 +5,10 @@ import { v4 as uuidv4 } from 'uuid'
 
 const employeeRouter = Router()
 
-const employees: Employee[] = []
+const employees: Employee[] = [
+  { id: '1', firstname: 'John', lastname: 'Doe', age: 35, isMarried: true },
+  { id: '2', firstname: 'Jane', lastname: 'Smith', age: 28, isMarried: false },
+];
 
 /**
  * GET 
@@ -17,7 +20,6 @@ employeeRouter.get('/', (req: Request, res: Response) => {
 
 employeeRouter.get('/employees', (req: Request, res: Response) => {
     res.status(200).json(employees)
-    res.sendFile(path.join(__dirname, '../../index.html'));
 });
 
 
