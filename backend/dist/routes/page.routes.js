@@ -7,9 +7,9 @@ const path = require('path');
 pageRouter.get('/', (req, res) => {
     res.status(200).send("Welcome to the homepage");
 });
-//Employee List
+// Employee List
 pageRouter.get("/employees", (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../../../frontend/index.html'));
 });
 // Admin
 pageRouter.get("/admin", (req, res) => {

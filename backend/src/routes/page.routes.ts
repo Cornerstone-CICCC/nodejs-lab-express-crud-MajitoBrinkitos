@@ -8,10 +8,10 @@ pageRouter.get('/', (req: Request, res: Response) => {
     res.status(200).send("Welcome to the homepage")
 });
 
-//Employee List
+// Employee List
 pageRouter.get("/employees", (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, '/frontend/index.html'));
-  })
+  res.sendFile(path.join(__dirname, '../../../frontend/index.html'));
+});
 
 // Admin
 pageRouter.get("/admin", (req: Request, res: Response) => {
